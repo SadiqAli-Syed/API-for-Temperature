@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        html{
+            background-color: rgb(234, 220, 203);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align:center;
+        }
+        form{
+            margin:40vh auto 0;
+        }
+        h1{
+            color:rgb(255, 0, 0);
+            display:inline-block;
+        }
+        input{
+            height:2rem;
+            display:inline-block;
+            color:blueviolet;
+            font-family: Georgia, 'Times New Roman', Times, sans-serif;
+        }
+        button{
+            display:block;
+            margin:auto;
+            height:2.5rem;
+            width:4.5rem;
+            background-color:aqua;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="post">
+        <div>
+            <label for="city"><h1>Enter City Name: </h1></label>
+            <input id="city" type="text" name="cityName">
+        </div>
+        <button type="submit" >Get</button>
+    </form>
+</body>
+</html>
