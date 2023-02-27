@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const https = require('https');
 const key = "5cfae089c18cc67764a8ca61cd761aba";
+const units = "metric";
 var city = "London";
 var api = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key;
 
@@ -16,7 +17,7 @@ app.get("/", (req, resp) => {
 
 app.post("/", (req, res) => {
     city = req.body.cityName;
-    api = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key;
+    api = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&units=" + units;
     https.get(api, (response)=>{
         response.on("data", (data)=>{
             const data1 = JSON.parse(data);
